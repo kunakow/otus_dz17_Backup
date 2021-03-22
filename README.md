@@ -174,3 +174,11 @@ etc_otus-2021-03-22@17:40            Mon, 2021-03-22 17:40:39 [458949ea0f81056c6
 ```
 0/5 * * * * /home/borg/backup_script.sh
 ```
+
+
+
+Ссылки на материалы:
+https://borgbackup.readthedocs.io/en/stable/usage/prune.html
+https://habr.com/ru/company/flant/blog/420055/
+https://community.hetzner.com/tutorials/install-and-configure-borgbackup/ru
+https://blog.andrewkeech.com/posts/170719_borg.html
