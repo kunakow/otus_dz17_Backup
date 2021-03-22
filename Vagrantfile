@@ -24,19 +24,15 @@ SCRIPT
 config.vm.define "borgserver" do |b|
     b.vm.network "private_network", ip: "192.168.0.10", virtualbox__intnet: "net1"
     b.vm.hostname = "borgserver"
-	b.vm.disk :disk, size: "10GB", name: "extra_storage"
- 	b.vm.provision "shell", inline: $setup_vm,        keep_color: true
+        b.vm.disk :disk, size: "10GB", name: "var"
+        b.vm.provision "shell", inline: $setup_vm,        keep_color: true
 end
-  
 
 
-#    nfss.vm.provision "shell", path: "nfss_script.sh"
+  config.vm.define "client" do |c|
+    c.vm.network "private_network", ip: "192.168.0.20", virtualbox__intnet: "net1"
+    c.vm.hostname = "client"
 
-#
-#  config.vm.define "client" do |client|
-#    client.vm.network "private_network", ip: "192.168.0.20", virtualbox__intnet: "net1"
-#    client.vm.hostname = "client"
-#    nfsc.vm.provision "shell", path: "nfsc_script.sh"
-#  end
+  end
 
 end
